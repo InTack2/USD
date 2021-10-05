@@ -106,6 +106,36 @@
           "character": 47
         }
       }
+    },
+    {
+      "file": "pxr/usdImaging/usdviewq/appController.py",
+      "description": "StatusBarを設定する事でMainWindow表示までの時間を短縮してるとのことだが、不明。",
+      "line": 429,
+      "selection": {
+        "start": {
+          "line": 425,
+          "character": 1
+        },
+        "end": {
+          "line": 429,
+          "character": 46
+        }
+      }
+    },
+    {
+      "file": "pxr/usdImaging/usdviewq/appController.py",
+      "description": "この書き方だとトップレベルのウィジェットにEventFilterを取り付けられたりする？  \nそもそもQApplicatonInstanceがよくわかってないので、学習必須。起動したプロセスで一つ？それとも複数？\nQMainWindowなどで複数物ことができるもの？",
+      "line": 435,
+      "selection": {
+        "start": {
+          "line": 431,
+          "character": 1
+        },
+        "end": {
+          "line": 434,
+          "character": 51
+        }
+      }
     }
   ],
   "ref": "dev"
