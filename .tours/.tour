@@ -1,0 +1,112 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "起動プロセス",
+  "steps": [
+    {
+      "file": "pxr/usdImaging/bin/usdview/usdview.py",
+      "description": "usdviewを実行した際にこれが実行される。",
+      "line": 35,
+      "selection": {
+        "start": {
+          "line": 35,
+          "character": 26
+        },
+        "end": {
+          "line": 35,
+          "character": 28
+        }
+      }
+    },
+    {
+      "file": "pxr/usdImaging/usdviewq/__init__.py",
+      "description": "実行関数",
+      "line": 60
+    },
+    {
+      "file": "pxr/usdImaging/usdviewq/__init__.py",
+      "description": "起動処理。",
+      "line": 85
+    },
+    {
+      "file": "pxr/usdImaging/usdviewq/__init__.py",
+      "description": "起動エントリーポイント",
+      "line": 338
+    },
+    {
+      "file": "pxr/usdImaging/usdviewq/__init__.py",
+      "description": "Preamble・・前文など。前処理と思いきやがっつりUI生成",
+      "line": 344,
+      "selection": {
+        "start": {
+          "line": 344,
+          "character": 21
+        },
+        "end": {
+          "line": 344,
+          "character": 25
+        }
+      }
+    },
+    {
+      "file": "pxr/usdImaging/usdviewq/__init__.py",
+      "description": "面白い使い方。調べないとわからん。",
+      "line": 350,
+      "selection": {
+        "start": {
+          "line": 350,
+          "character": 13
+        },
+        "end": {
+          "line": 350,
+          "character": 72
+        }
+      }
+    },
+    {
+      "file": "pxr/usdImaging/usdviewq/__init__.py",
+      "description": "前処理と思いきや、前述の雰囲気から薄々感じるはずだが、実質前処理ではなく、QAplication作成やUI本体の生成などメイン処理。",
+      "line": 316
+    },
+    {
+      "file": "pxr/usdImaging/usdviewq/__init__.py",
+      "description": "何をやってるか不明。\nおそらくスレッド周りを指定してるはず。",
+      "line": 320
+    },
+    {
+      "file": "pxr/usdImaging/usdviewq/__init__.py",
+      "description": "この中でUIの生成を対応。  \nAppControllerだとQApplicationを管理するクラスっぽい感じがするので、気になる。  \nUSDViewerControllerだとMVCでまとめてControllerを生成してるのかな？っとなるか。  ",
+      "line": 334
+    },
+    {
+      "file": "pxr/usdImaging/usdviewq/appController.py",
+      "description": "UI本体。\nQObjectとしているのはなぜか不明。",
+      "line": 278
+    },
+    {
+      "file": "pxr/usdImaging/usdviewq/appController.py",
+      "description": "すごくごちゃごちゃしてるinitialize関数。  \n",
+      "line": 362
+    },
+    {
+      "file": "pxr/usdImaging/usdviewq/appController.py",
+      "description": "内部はただのwith文対応したTimer。  \nuiOpenTimerにwith文のスコープ内の計測時間が格納される。  \nデコレーター対応の物でもよいかもしれない。  \n``` python\nclass Timer(object):\n    \"\"\"Use as a context object with python's \"with\" statement, like so:\n       with Timer() as t:\n           doSomeStuff()\n       t.PrintTime(\"did some stuff\")\n    \"\"\"\n    def __enter__(self):\n        self._start = time.time()\n        self.interval = 0\n        return self\n\n    def __exit__(self, *args):\n        self._end = time.time()\n        self.interval = self._end - self._start\n\n    def PrintTime(self, action):\n        print(\"Time to %s: %2.3fs\" % (action, self.interval))\n```",
+      "line": 365
+    },
+    {
+      "file": "pxr/usdImaging/usdviewq/appController.py",
+      "description": "このUi_MainWindowがUSDViewerUIのメイン関数。 \n文体からPySideのuic変換で.ui→.pyを読み込んでいる事がわかる。  ",
+      "line": 419,
+      "selection": {
+        "start": {
+          "line": 417,
+          "character": 1
+        },
+        "end": {
+          "line": 419,
+          "character": 47
+        }
+      }
+    }
+  ],
+  "ref": "dev"
+}
