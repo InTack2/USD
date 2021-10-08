@@ -136,6 +136,46 @@
           "character": 51
         }
       }
+    },
+    {
+      "file": "pxr/usdImaging/usdviewq/appController.py",
+      "description": "USDView用のInterFace生成。  \nインターフェースを生成は少し不思議？",
+      "line": 441
+    },
+    {
+      "file": "pxr/usdImaging/usdviewq/appController.py",
+      "description": "USDStageの生成。  \nusdFileのフラグ使用した時と同様なので、ここでUSDファイル指定して生成。",
+      "line": 448,
+      "selection": {
+        "start": {
+          "line": 446,
+          "character": 13
+        },
+        "end": {
+          "line": 448,
+          "character": 49
+        }
+      }
+    },
+    {
+      "file": "pxr/usdImaging/usdviewq/appController.py",
+      "description": "ただここでstageオブジェクトが存在してないときは終了にしてるので空のファイルを渡した時は空のStageとして起動してるかな?",
+      "line": 450,
+      "selection": {
+        "start": {
+          "line": 449,
+          "character": 1
+        },
+        "end": {
+          "line": 450,
+          "character": 28
+        }
+      }
+    },
+    {
+      "file": "pxr/usdImaging/usdviewq/appController.py",
+      "description": "Pseudo\n擬似\nTreeViewなどで表示する時に左側の▶︎表示する為にFakeデータ入れたりするのでその様な形でRootに入れてるイメージか.\n",
+      "line": 452
     }
   ],
   "ref": "dev"

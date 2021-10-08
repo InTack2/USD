@@ -1,0 +1,32 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "stageViewの描画プロセス",
+  "steps": [
+    {
+      "file": "pxr/usdImaging/usdviewq/appController.py",
+      "description": "Viewの生成箇所",
+      "line": 1681
+    },
+    {
+      "file": "pxr/usdImaging/usdviewq/appController.py",
+      "description": "わかりやすい名称。Fixedが固定されてるUIでVaryingが変化という意味らしいので、変動するUIということか。\nただresetと記載あるが、実質stageViewの生成などをおこなっている。\n\ncreateVaryingUIなどを用意して初回はそっちを呼ぶ方が良いか。\n",
+      "line": 2263,
+      "selection": {
+        "start": {
+          "line": 2262,
+          "character": 1
+        },
+        "end": {
+          "line": 2263,
+          "character": 32
+        }
+      }
+    },
+    {
+      "file": "pxr/usdImaging/usdviewq/stageView.py",
+      "description": "QtOpenGLのQGLWidgetなので、実際のViewなのは可能性高い。\n",
+      "line": 667
+    }
+  ],
+  "ref": "dev"
+}
