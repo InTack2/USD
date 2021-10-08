@@ -26,6 +26,21 @@
       "file": "pxr/usdImaging/usdviewq/stageView.py",
       "description": "QtOpenGLのQGLWidgetなので、実際のViewなのは可能性高い。\n",
       "line": 667
+    },
+    {
+      "file": "pxr/usdImaging/usdviewq/stageView.py",
+      "description": "    # TODO: StageViewが必要とする状態のすべてとは言わないまでも、ほとんどのものは（おそらくステージを除いて？\n    # ステージを除いて）、dataModelから取得するように移行し、再描画は\n    # dataModelが発するシグナルによってトリガーされるべきです。\n何気にとても大事なこと書いてる。\nModel側にSignalを追加してそのDataの変更を元に再描画すべきというのは確かにと思った。\n確かにそうすると仮にUI側の値をユーザーが変更した際にView→Modelの変更時点でSignalが発行される。\n\nそう考えるとViewにModelを引数として渡すのは合理的か？",
+      "line": 677,
+      "selection": {
+        "start": {
+          "line": 675,
+          "character": 1
+        },
+        "end": {
+          "line": 677,
+          "character": 58
+        }
+      }
     }
   ],
   "ref": "dev"
